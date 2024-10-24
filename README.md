@@ -4,7 +4,7 @@ This repository is the implementation for the paper "Super-resolution Reconstruc
 ## Datasets
 raining: DIV2K or DF2K.
 
-Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk] https://pan.baidu.com/s/1NF_McRKPgkRjqFCevjWMiQ?pwd=ci78).
+Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk] (https://pan.baidu.com/s/1NF_McRKPgkRjqFCevjWMiQ?pwd=ci78)).
 
 Preparing: Please refer to the Dataset Preparation of BasicSR.
 
