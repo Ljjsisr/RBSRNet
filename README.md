@@ -21,3 +21,8 @@ The BasicSR framework is utilized to train our RBSRNet, also testing.
 ### Testing with the example option
 
 ```python basicsr/test.py -opt options/test/RBSRNet/test_RBSSRNet_Lx4.yml```
+
+### jieguo
+
+![image](https://github.com/user-attachments/assets/8991ecbb-76de-4488-ad5b-40bbbb2836e3)
+
