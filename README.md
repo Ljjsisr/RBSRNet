@@ -9,7 +9,7 @@ Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk](https://pan.ba
 Preparing: Please refer to the [Dataset Preparation](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md) of BasicSR.
 
 ## Train and Test
-The BasicSR framework is utilized to train our DLKN, also testing.
+The BasicSR framework is utilized to train our RBSRNet, also testing.
 
 ### Training with the example option
 
