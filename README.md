@@ -14,9 +14,7 @@ Preparing: Please refer to the [Dataset Preparation](https://github.com/XPixelGr
 ## ▶️Train and Test
 The BasicSR framework is utilized to train our RBSRNet, also testing.
 
-### ![image](https://github.com/user-attachments/assets/1546d231-0160-4919-bc11-b1d7dd052b1b)
-
-Training with the example option
+### Training with the example option
 
 ``` python basicsr/train.py -opt options/train/RBSRNet/train_RBSSRNet_Lx4.yml ```
 
@@ -24,7 +22,7 @@ Training with the example option
 
 ```python basicsr/test.py -opt options/test/RBSRNet/test_RBSSRNet_Lx4.yml```
 
-### Results Display
+### 💡Results Display
 
 ![image](https://github.com/user-attachments/assets/8991ecbb-76de-4488-ad5b-40bbbb2836e3)
 
