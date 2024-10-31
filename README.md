@@ -16,11 +16,11 @@ The BasicSR framework is utilized to train our RBSRNet, also testing.
 
 ### Training with the example option
 
-``` python basicsr/train.py -opt options/train/RBSRNet/train_RBSSRNet_Lx4.yml ```
+``` python basicsr/train.py -opt options/train/RBSRNet/train_RBSRNet_Lx4.yml ```
 
 ### Testing with the example option
 
-```python basicsr/test.py -opt options/test/RBSRNet/test_RBSSRNet_Lx4.yml```
+```python basicsr/test.py -opt options/test/RBSRNet/test_RBSRNet_Lx4.yml```
 
 ### 💡Results Display
 
