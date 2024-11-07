@@ -25,9 +25,9 @@ This repository is the implementation for the paper "Retinal Bionic Super-Resolu
 
 The BasicSR framework is utilized to train our RBSRNet, also testing.
 
-完整的 BasicSR 中文解读文档 PDF，你所需要的内容可以在相应的章节中找到。
+- 完整的 BasicSR 中文解读文档 PDF，你所需要的内容可以在相应的章节中找到。
 
-文档的最新版可以从 [BasicSR-docs/releases](https://github.com/XPixelGroup/BasicSR-docs/releases) 下载。
+- 文档的最新版可以从 [BasicSR-docs/releases](https://github.com/XPixelGroup/BasicSR-docs/releases) 下载。
 
 ## 🎈Datasets
 Training: DIV2K or DF2K.
