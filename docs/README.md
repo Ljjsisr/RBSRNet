@@ -13,44 +13,35 @@ This folder includes:
 
 欢迎大家一起来帮助查找文档中的错误，完善文档。
 
-## 如何在本地自动生成 API docs
+
+
+# RBSRNet
+
+Drawing inspiration from the retinal information processing mechanism, we propose a novel super-resolution reconstruction method named RBSRNet. This method employs a lateral inhibition module (LIM) to mimic the regulatory mechanism of horizontal cells, enabling local inhibition and enhancement of shallow extracted features, thereby efficiently extracting high-frequency information. Furthermore, by simulating the information integration mechanism of bipolar cells, we design an enhanced hierarchical feature fusion block (EHFFB) and a hierarchical fusion network (HFN). These components facilitate effective fusion and enhancement of features at different levels, improving the model's representational capacity. Experimental results on four datasets demonstrate that RBSRNet significantly outperforms advanced methods, particularly in texture detail recovery. Specifically, RBSRNet achieves an average PSNR that is 0.26dB higher than IRN on the Urban100 dataset, with reconstructed images exhibiting superior visual effects and richer texture details. The source code is available at https://github.com/Ljjsisr/RBSRNet.
+
+This repository is the implementation for the paper "Super-resolution Reconstruction Method of Retinal Bionics for Single Image". 
+
+## 🎈Datasets
+Training: DIV2K or DF2K.
+
+Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk](https://pan.baidu.com/s/1NF_McRKPgkRjqFCevjWMiQ?pwd=ci78)).
+
+Preparing: Please refer to the [Dataset Preparation](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md) of BasicSR.
+
+## ▶️Train and Test
+The BasicSR framework is utilized to train our RBSRNet, also testing.
+
+**Training with the example option**
 
 ```bash
-cd docs
-make html
+python basicsr/train.py -opt options/train/RBSRNet/train_RBSRNet_Lx4.yml 
 ```
 
-## 规范
+**Testing with the example option**
 
-rst 语法参考: https://3vshej.cn/rstSyntax/
+```python basicsr/test.py -opt options/test/RBSRNet/test_RBSRNet_Lx4.yml```
 
-着重几个点：
+## 💡Results Display
 
-```rst
-- 空行
-- :file:`file`, :func:`func`, :class:`class`, :math:`\gamma`
-- **粗体**，*斜体*
-- ``Paper: title``
-- Reference: link
-```
+![image](https://github.com/user-attachments/assets/8991ecbb-76de-4488-ad5b-40bbbb2836e3)
 
-Examples:
-
-```python
-class SPyNetTOF(nn.Module):
-    """SPyNet architecture for TOF.
-
-    Note that this implementation is specifically for TOFlow. Please use :file:`spynet_arch.py` for general use.
-    They differ in the following aspects:
-
-    1. The basic modules here contain BatchNorm.
-    2. Normalization and denormalization are not done here, as they are done in TOFlow.
-
-    ``Paper: Optical Flow Estimation using a Spatial Pyramid Network``
-
-    Reference: https://github.com/Coldog2333/pytoflow
-
-    Args:
-        load_path (str): Path for pretrained SPyNet. Default: None.
-    """
-```
