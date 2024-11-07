@@ -30,11 +30,12 @@ python setup.py develop
 ```
 
 ## 🎈Datasets
+
+Preparing: Please refer to the [Dataset Preparation](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md) of BasicSR.
+
 Training: DIV2K or DF2K.
 
 Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk](https://pan.baidu.com/s/1NF_McRKPgkRjqFCevjWMiQ?pwd=ci78)).
-
-Preparing: Please refer to the [Dataset Preparation](https://github.com/XPixelGroup/BasicSR/blob/master/docs/DatasetPreparation.md) of BasicSR.
 
 ## ▶️Train and Test
 
