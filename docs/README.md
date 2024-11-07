@@ -41,9 +41,9 @@ Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk](https://pan.ba
 
 **The complete network code is in `basicsr/archs`**
 
-**The checkpoint file is in the `experiments` folder**
+**The checkpoint file is in the `experiments`**
 
-**The script for running is in `options` folder**
+**The script for running is in `options`**
 
 - Training with the example option
 
