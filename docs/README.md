@@ -4,8 +4,6 @@
 
 <p align="center">Xiaofen Jia, Junjun Liu, Baiting Zhao, Zhenhuan Liang</p>
 
-Xiaofen Jia, Junjun Liu, Baiting Zhao, Zhenhuan Liang
-
 ## 📖 Introduction:
 This repository is the implementation for the paper "Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion". 
 
