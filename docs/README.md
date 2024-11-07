@@ -19,6 +19,12 @@ This implementation based on [BasicSR](https://github.com/XPixelGroup/BasicSR). 
 
 - 文档的最新版可以从 [BasicSR-docs/releases](https://github.com/XPixelGroup/BasicSR-docs/releases) 下载。
 
+```bash
+python 3.8.18
+pytorch 2.0.0
+cuda 11.8
+```
+
 ## 🎈Datasets
 Training: DIV2K or DF2K.
 
