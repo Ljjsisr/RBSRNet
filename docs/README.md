@@ -15,10 +15,6 @@ Drawing inspiration from the retinal information processing mechanism, we propos
 
 This implementation based on [BasicSR](https://github.com/XPixelGroup/BasicSR). Please refer to BasicSR for training and testing. 
 
-- 完整的 BasicSR 中文解读文档 PDF，你所需要的内容可以在相应的章节中找到。
-
-- 文档的最新版可以从 [BasicSR-docs/releases](https://github.com/XPixelGroup/BasicSR-docs/releases) 下载。
-
 ```bash
 python 3.8.18
 pytorch 2.0.0
