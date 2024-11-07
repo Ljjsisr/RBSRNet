@@ -1,5 +1,7 @@
 # RBSRNet
+<p align="center">Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion</p>
 
+## 📖 Introduction:
 This repository is the implementation for the paper "Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion". 
 
 Drawing inspiration from the retinal information processing mechanism, we propose a novel super-resolution reconstruction method named RBSRNet. This method employs a lateral inhibition module (LIM) to mimic the regulatory mechanism of horizontal cells, enabling local inhibition and enhancement of shallow extracted features, thereby efficiently extracting high-frequency information. Furthermore, by simulating the information integration mechanism of bipolar cells, we design an enhanced hierarchical feature fusion block (EHFFB) and a hierarchical fusion network (HFN). These components facilitate effective fusion and enhancement of features at different levels, improving the model's representational capacity. Experimental results on four datasets demonstrate that RBSRNet significantly outperforms advanced methods, particularly in texture detail recovery. Specifically, RBSRNet achieves an average PSNR that is 0.26dB higher than IRN on the Urban100 dataset, with reconstructed images exhibiting superior visual effects and richer texture details. The source code is available at https://github.com/Ljjsisr/RBSRNet.
