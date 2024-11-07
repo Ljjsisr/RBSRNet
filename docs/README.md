@@ -49,7 +49,9 @@ python basicsr/train.py -opt options/train/RBSRNet/train_RBSRNet_Lx4.yml
 
 ```python basicsr/test.py -opt options/test/RBSRNet/test_RBSRNet_Lx4.yml```
 
-## 💡Results Display
+## 📈 Results
 
-![image](https://github.com/user-attachments/assets/8991ecbb-76de-4488-ad5b-40bbbb2836e3)
+![image](https://github.com/user-attachments/assets/3c129bca-16f6-4848-941c-86b3657dc5ac)
+
+![image](https://github.com/user-attachments/assets/f3ae1eba-7f91-4f54-84f1-90ce86bcdcd8)
 
