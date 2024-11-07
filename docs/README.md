@@ -39,10 +39,10 @@ Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk](https://pan.ba
 
 ## ▶️Train and Test
 
-**The complete network code is in basicsr/archs/RBSRNet6_arch.py**
+**The complete network code is in basicsr/archs**
 
 
-**The script for running is in options/train/RBSRNet**
+**The script for running is in options**
 
 - Training with the example option
 
