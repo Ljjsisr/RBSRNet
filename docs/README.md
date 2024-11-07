@@ -2,7 +2,7 @@
 
 ## <p align="center">Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion</p>
 
-### <p align="center">Xiaofen Jia, Junjun Liu, Baiting Zhao, Zhenhuan Liang</p>
+<p align="center">Xiaofen Jia, Junjun Liu, Baiting Zhao, Zhenhuan Liang</p>
 
 Xiaofen Jia, Junjun Liu, Baiting Zhao, Zhenhuan Liang
 
