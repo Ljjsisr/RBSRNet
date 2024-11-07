@@ -1,5 +1,5 @@
 # RBSRNet
-<p align="center">Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion</p>
+## <p align="center">Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion</p>
 
 ## 📖 Introduction:
 This repository is the implementation for the paper "Retinal Bionic Super-Resolution Reconstruction Network: Enhancing Image Details through Hierarchical Feature Fusion". 
