@@ -21,6 +21,14 @@ pytorch 2.0.0
 cuda 11.8
 ```
 
+```bash
+git clone this repo
+cd RBSRNet
+pip install -r requirements.txt
+pip install google-auth-oauthlib
+python setup.py develop
+```
+
 ## 🎈Datasets
 Training: DIV2K or DF2K.
 
