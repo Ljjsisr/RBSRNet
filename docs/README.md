@@ -39,13 +39,18 @@ Testing: Set5, Set14, BSD100, Urban100, Manga109 ([Baidu Netdisk](https://pan.ba
 
 ## ▶️Train and Test
 
-**Training with the example option**
+**The complete network code is in basicsr/archs/RBSRNet6_arch.py**
+
+
+**The script for running is in options/train/RBSRNet**
+
+- Training with the example option
 
 ```bash
 python basicsr/train.py -opt options/train/RBSRNet/train_RBSRNet_Lx4.yml 
 ```
 
-**Testing with the example option**
+- Testing with the example option
 
 ```python basicsr/test.py -opt options/test/RBSRNet/test_RBSRNet_Lx4.yml```
 
