@@ -1,0 +1,134 @@
+# general settings
+name: 001_RBSRNet_Lx3_f64b01_DIV2K_100k_B32G1_wandb
+model_type: SRModel
+scale: 3
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: DIV2K
+    type: PairedImageDataset
+    dataroot_gt: datasets/DIV2K/DIV2K_train_HR_sub  # GT
+    dataroot_lq: datasets/DIV2K/DIV2K_train_LR_bicubic/X3_sub  # LQ
+    # (for lmdb)
+    # dataroot_gt: datasets/DIV2K/DIV2K_train_HR_sub.lmdb
+    # dataroot_lq: datasets/DIV2K/DIV2K_train_LR_bicubic_X2_sub.lmdb
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+      # (for lmdb)
+      # type: lmdb
+
+    gt_size: 144
+    use_hflip: true
+    use_rot: true
+
+    # data loader
+    num_worker_per_gpu: 8
+    batch_size_per_gpu: 32
+    dataset_enlarge_ratio: 1  # 放大 dataset 的长度倍数 (默认为1)。可以扩大          一个 epoch 所需 iterations
+    prefetch_mode: ~  # 预先读取数据的方式
+
+  val:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: datasets/Set5/GTmod12
+    dataroot_lq: datasets/Set5/LRbicx3
+    io_backend:
+      type: disk
+      
+  val_2:
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: datasets/Set14/GTmod12
+    dataroot_lq: datasets/Set14/LRbicx3
+    io_backend:
+      type: disk
+      
+  val_3:
+    name: BSD100
+    type: PairedImageDataset
+    dataroot_gt: datasets/BSD100/HR_GTmod12
+    dataroot_lq: datasets/BSD100/LR3
+    io_backend:
+      type: disk
+      
+  val_4:
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: datasets/Urban100/HR_GTmod12
+    dataroot_lq: datasets/Urban100/LR3
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: RBSRNet
+  num_in_ch: 3
+  num_out_ch: 3
+  num_feat: 64
+  num_block: 1
+  upscale: 3
+  #  res_scale: 0.1
+  img_range: 255.
+  rgb_mean: [ 0.4488, 0.4371, 0.4040 ]
+
+# path
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# training settingsz
+train:
+  ema_decay: 0.999  # EMA更新权重
+  optim_g:   # 这块是优化器的配置
+    type: Adam  # 选择优化器类型，例如Adam
+    lr: !!float 2e-4  # 初始学习率
+    weight_decay: 0  # 权重衰退参数
+    betas: [0.9, 0.999]  # Adam优化器的 beta1和 beta2
+
+  scheduler:  # 这块是学习率调度器的配置
+    type: MultiStepLR   # 选择学习率更新策略
+    milestones: [100000, 200000, 300000, 400000]  # 更新周期
+    gamma: 0.5  # 衰减率
+
+  total_iter: 500000  # 总共进行的训练迭代次数
+  warmup_iter: -1  # no warm up
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+# validation settings
+val:
+  val_freq: !!float 5e3  # 每隔 5000 iterations做一次 validation
+  save_img: false  # 否需要在 validation的时候保存图片
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 3  # 计算指标时 crop图像边界像素范围(不纳入计算范围)
+      test_y_channel: true  # 是否转成在 Y(CbCr)空间上计算      !!!!一定要是 true
+    ssim:
+      type: calculate_ssim
+      crop_border: 3
+      test_y_channel: true
+
+# logging settings
+logger:
+  print_freq: 100  # 多少次迭代打印一次训练信息
+  save_checkpoint_freq: !!float 5e3  # 多少次迭代保存一次模型权重和训练状态
+  use_tb_logger: true   # 是否使用tensorboard logger
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
